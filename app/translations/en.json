@@ -1,0 +1,11 @@
+{
+    "email_verified": "Email verified successfully",
+    "verify_account_title": "Verify Your Account",
+    "hello": "Hello",
+    "instruction_verify": "Thank you for registering at OurSite. Please click the following link to verify your email address:",
+    "button_verify_email": "Verify Email",
+    "footer_thanks": "Thanks, The OurSite Team",
+    "footer_unsubscribe": "You are receiving this email because you have opted in at our website. If you no longer wish to receive these emails, you can unsubscribe at any time by clicking",
+    "account_locked_subject": "Your Account Has Been Locked",
+    "account_locked_message": "Your account has been locked due to multiple failed login attempts. Please contact support to unlock your account."
+  }
