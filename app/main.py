@@ -6,6 +6,11 @@ from app.database import Database
 from app.dependencies import get_settings
 from app.routers import user_routes
 from app.utils.api_description import getDescription
+from app.utils.translation import load_translations  # Import the load_translations function
+
+# Load translations into memory
+load_translations()
+
 app = FastAPI(
     title="User Management",
     description=getDescription(),
@@ -32,6 +37,7 @@ app.add_middleware(
 async def startup_event():
     settings = get_settings()
     Database.initialize(settings.database_url, settings.debug)
+    load_translations()  # Load translation files at application startup
 
 @app.exception_handler(Exception)
 async def exception_handler(request, exc):

@@ -4,6 +4,7 @@ from settings.config import settings
 from app.utils.smtp_connection import SMTPClient
 from app.utils.template_manager import TemplateManager
 from app.models.user_model import User
+from app.utils.translation import translate  # Import the translate function
 
 class EmailService:
     def __init__(self, template_manager: TemplateManager):
@@ -29,9 +30,20 @@ class EmailService:
         self.smtp_client.send_email(subject_map[email_type], html_content, user_data['email'])
 
     async def send_verification_email(self, user: User):
+        # Determine user's preferred language; default to 'en' if not provided
+        lang = user.preferred_language if user.preferred_language else "en"
+
+        # Translate email subject and content
+        email_subject = translate(lang, "email_verification_subject")
+        email_content = translate(lang, "email_verification_content")
+
         verification_url = f"{settings.server_base_url}verify-email/{user.id}/{user.verification_token}"
-        await self.send_user_email({
-            "name": user.first_name,
-            "verification_url": verification_url,
-            "email": user.email
-        }, 'email_verification')
+        html_content = self.template_manager.render_template(
+            "email_verification",
+            name=user.first_name or user.nickname,  # Fallback to nickname if first_name is None
+            verification_url=verification_url,
+            email_content=email_content  # Inject translated content
+    )
+
+        # Send email - assumed synchronous
+        self.smtp_client.send_email(email_subject, html_content, user.email)

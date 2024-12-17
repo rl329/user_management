@@ -9,7 +9,14 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     QR_CODE_DIR=/myapp/qr_codes
 
-WORKDIR /myapp
+# Set the working directory inside the container
+WORKDIR /user_management
+
+# Copy the project files into the container
+COPY ./app/translations /user_management/app/translations
+
+# Copy project files
+COPY . /user_management
 
 # Update system and specifically upgrade libc-bin to the required security patch version
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -44,7 +51,7 @@ ENV PATH="/.venv/bin:$PATH" \
     QR_CODE_DIR=/myapp/qr_codes
 
 # Set the working directory
-WORKDIR /myapp
+WORKDIR /user_management
 
 # Create and switch to a non-root user
 RUN useradd -m myuser

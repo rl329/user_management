@@ -20,7 +20,7 @@ class User(Base):
     """
     Represents a user within the application, corresponding to the 'users' table in the database.
     This class uses SQLAlchemy ORM for mapping attributes to database columns efficiently.
-    
+
     Attributes:
         id (UUID): Unique identifier for the user.
         nickname (str): Unique nickname for privacy, required.
@@ -74,11 +74,12 @@ class User(Base):
     email_verified: Mapped[bool] = Column(Boolean, default=False, nullable=False)
     hashed_password: Mapped[str] = Column(String(255), nullable=False)
 
+  # NEW FIELD: User's preferred language
+    preferred_language: Mapped[str] = Column(String(10), nullable=False, default="en")
 
     def __repr__(self) -> str:
         """Provides a readable representation of a user object."""
-        return f"<User {self.nickname}, Role: {self.role.name}>"
-
+        return f"<User {self.nickname}, Role: {self.role.name}, Language: {self.preferred_language}>"
     def lock_account(self):
         self.is_locked = True
 

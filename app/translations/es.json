@@ -1,8 +1,8 @@
 {
     "email_verified": "Correo verificado con éxito",
-    "verify_account_title": "Verifique su cuenta",
+    "email_verification_subject": "Verifique su cuenta",
     "hello": "Hola",
-    "instruction_verify": "Gracias por registrarse en OurSite. Por favor haga clic en el siguiente enlace para verificar su dirección de correo electrónico:",
+    "email_verification_content": "Gracias por registrarse en OurSite. Por favor haga clic en el siguiente enlace para verificar su dirección de correo electrónico:",
     "button_verify_email": "Verificar correo electrónico",
     "footer_thanks": "Gracias, El equipo de OurSite",
     "footer_unsubscribe": "Está recibiendo este correo porque se ha registrado en nuestro sitio web. Si ya no desea recibir estos correos electrónicos, puede darse de baja en cualquier momento haciendo clic",
