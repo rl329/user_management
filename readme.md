@@ -29,35 +29,35 @@ Here are the 5 QA issues closed during the project:
 ## Test Files:
 Below are the test file links (not the actual tests but references to the files):
 
-1. **User Model Tests**
-   - File: [test_user_model.py](https://github.com/rl329/user_management/blob/main/tests/test_user_model.py)
+1. **User API Tests**
+   - File: [test_user_api.py](https://github.com/rl329/user_management/blob/main/tests/test_api/test_users_api.py)
 
-2. **User Service Tests**
-   - File: [test_user_service.py](https://github.com/rl329/user_management/blob/main/tests/test_user_service.py)
+2. **User Schemas Tests**
+   - File: [test_user_schemas.py](https://github.com/rl329/user_management/blob/main/tests/test_schemas/test_user_schemas.py))
 
-3. **User Routes Tests**
-   - File: [test_user_routes.py](https://github.com/rl329/user_management/blob/main/tests/test_user_routes.py)
+3. **User Service Tests**
+   - File: [test_user_service.py](https://github.com/rl329/user_management/blob/main/tests/test_services/test_user_service.py)
 
-4. **Email Service Tests**
-   - File: [test_email_service.py](https://github.com/rl329/user_management/blob/main/tests/test_email_service.py)
+4. **Translation Tests**
+   - File: [test_translation.py](https://github.com/rl329/user_management/blob/main/tests/test_email_service.py)
 
-5. **Utility Tests**
-   - File: [test_utilities.py](https://github.com/rl329/user_management/blob/main/tests/test_utilities.py)
+5. **Conftest Tests**
+   - File: [conftest.py](https://github.com/rl329/user_management/blob/main/tests/conftest.py)
 
-6. **JWT Service Tests**
-   - File: [test_jwt_service.py](https://github.com/rl329/user_management/blob/main/tests/test_jwt_service.py)
+6. **Test Conftest**
+   - File: [test_conftest.py](https://github.com/rl329/user_management/blob/main/tests/test_conftest.py)
 
-7. **Database Integration Tests**
-   - File: [test_database_integration.py](https://github.com/rl329/user_management/blob/main/tests/test_database_integration.py)
+7. **Link Generation Tests**
+   - File: [test_link_generation.py](https://github.com/rl329/user_management/blob/main/tests/test_link_generation.py)
 
-8. **Translation Function Tests**
-   - File: [test_translation.py](https://github.com/rl329/user_management/blob/main/tests/test_translation.py)
+8. **Email Tests**
+   - File: [test_email.py](https://github.com/rl329/user_management/blob/main/tests/test_email.py)
 
-9. **Email Verification Flow Tests**
-   - File: [test_email_verification_flow.py](https://github.com/rl329/user_management/blob/main/tests/test_email_verification_flow.py)
+9. **Secuirty Tests**
+    - File: [test_security.py](https://github.com/rl329/user_management/blob/main/tests/test_security.py)
 
-10. **Login and Registration Tests**
-    - File: [test_login_registration.py](https://github.com/rl329/user_management/blob/main/tests/test_login_registration.py)
+10. **User Model Tests**
+    - File: [test_user_model.py](https://github.com/rl329/user_management/blob/main/tests/test_models/test_user_model.py)
 
 ## Project Screenshots
 
