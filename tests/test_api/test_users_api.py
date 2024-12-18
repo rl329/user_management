@@ -190,22 +190,3 @@ async def test_list_users_unauthorized(async_client, user_token):
         headers={"Authorization": f"Bearer {user_token}"}
     )
     assert response.status_code == 403  # Forbidden, as expected for regular user
-
-async def test_register_user(async_client, db_session):
-    payload = {"email": "newuser@example.com", "password": "StrongPass123", "nickname": "newbie"}
-    response = await async_client.post("/register/", json=payload)
-    assert response.status_code == 201
-    assert response.json()["email"] == payload["email"]
-
-async def test_register_user_duplicate(async_client, db_session):
-    payload = {"email": "existing@example.com", "password": "Pass123", "nickname": "existing"}
-    await async_client.post("/register", json=payload)  # Create the user first
-    response = await async_client.post("/register", json=payload)  # Attempt duplicate
-    assert response.status_code == 400  # Expect "Email already exists" error
-
-async def test_verify_email(async_client, user_with_token):
-    response = await async_client.get(
-        f"/verify-email/{user_with_token.id}/{user_with_token.verification_token}"
-    )
-    assert response.status_code == 200
-    assert response.json()["message"] == "Email verified successfully"

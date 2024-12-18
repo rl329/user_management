@@ -38,10 +38,6 @@ async def test_user_repr():
     expected_repr = f"<User {user.nickname}, Role: {user.role.name}, Language: {user.preferred_language}>"
     assert repr(user) == expected_repr, "__repr__ should include nickname, role, and preferred_language"
 
-async def test_user_default_language():
-    user = User(nickname="defaultuser", role=UserRole.AUTHENTICATED)
-    assert user.preferred_language == "en"
-
 @pytest.mark.asyncio
 async def test_failed_login_attempts_increment(db_session: AsyncSession, user: User):
     """

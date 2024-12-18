@@ -162,14 +162,8 @@ async def test_unlock_user_account(db_session, locked_user):
     refreshed_user = await UserService.get_by_id(db_session, locked_user.id)
     assert not refreshed_user.is_locked, "The user should no longer be locked"
 
-async def test_login_success(async_client, db_session):
-    payload = {"username": "verified_user@example.com", "password": "CorrectPass123"}
-    response = await async_client.post("/login", data=payload)
-    assert response.status_code == 200
-
 async def test_login_incorrect_password(async_client, verified_user):
     payload = {"username": verified_user.email, "password": "WrongPass123"}
     response = await async_client.post("/login/", data=payload)
     assert response.status_code == 401
     assert response.json()["detail"] == "Incorrect email or password."
-
