@@ -1,6 +1,11 @@
 {
-    "email_verified": "メールは正常に確認されました",
-    "verify_account_title": "アカウントを確認してください",
-    "hello": "こんにちは",
-    "instruction_verify": "OurSiteにご登録いただきありがとうございます。以下のリンクをクリックしてメールアドレスを確認してください:"
-  }
+  "email_verified": "メールが正常に確認されました",
+  "email_verification_subject": "アカウントを確認してください",
+  "hello": "こんにちは、{name} さん、",
+  "email_verification_content": "当サイトにご登録いただきありがとうございます。メールアドレスを確認するには、以下のリンクをクリックしてください：",
+  "button_verify_email": "メールを確認する",
+  "footer_thanks": "ありがとうございます、 当サイトチーム",
+  "footer_unsubscribe": "このメールは、当サイトにご登録いただいたためお送りしています。配信を停止するには、{here} をクリックしてください。",
+  "account_locked_subject": "アカウントがロックされました",
+  "account_locked_message": "複数回のログイン失敗により、アカウントがロックされました。サポートに連絡してロックを解除してください。"
+}

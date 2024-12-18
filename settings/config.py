@@ -4,6 +4,7 @@ from pydantic import  Field, AnyUrl, DirectoryPath
 from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
 import os
+from pydantic import validator
 
 # Load .env file
 load_dotenv()
@@ -49,6 +50,11 @@ class Settings(BaseSettings):
     # Debug configuration
     debug: bool = Field(default=False, description="Debug mode outputs errors and SQL queries")
     send_real_mail: bool = Field(default=True, description="Send real emails")
+
+    # Validator to strip trailing slashes from server_base_url
+    @validator("server_base_url", pre=True)
+    def remove_trailing_slash(cls, v):
+        return v.rstrip("/")
 
 
     class Config:

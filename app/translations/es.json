@@ -1,11 +1,11 @@
 {
-    "email_verified": "Correo verificado con éxito",
-    "email_verification_subject": "Verifique su cuenta",
-    "hello": "Hola",
-    "email_verification_content": "Gracias por registrarse en OurSite. Por favor haga clic en el siguiente enlace para verificar su dirección de correo electrónico:",
-    "button_verify_email": "Verificar correo electrónico",
-    "footer_thanks": "Gracias, El equipo de OurSite",
-    "footer_unsubscribe": "Está recibiendo este correo porque se ha registrado en nuestro sitio web. Si ya no desea recibir estos correos electrónicos, puede darse de baja en cualquier momento haciendo clic",
-    "account_locked_subject": "Su cuenta ha sido bloqueada",
-    "account_locked_message": "Su cuenta ha sido bloqueada debido a múltiples intentos fallidos de inicio de sesión. Por favor, póngase en contacto con el soporte para desbloquear su cuenta."
-  }
+  "email_verified": "Correo verificado con éxito",
+  "email_verification_subject": "Verifique su cuenta",
+  "hello": "Hola",
+  "email_verification_content": "Gracias por registrarse en NuestroSitio. Por favor haga clic en el siguiente enlace para verificar su dirección de correo electrónico:",
+  "button_verify_email": "Verificar correo electrónico",
+  "footer_thanks": "Gracias, El equipo de NuestroSitio",
+  "footer_unsubscribe": "Está recibiendo este correo electrónico porque se ha suscrito a nuestro sitio web. Si ya no desea recibir estos correos electrónicos, puede darse de baja en cualquier momento haciendo clic {here}.",
+  "account_locked_subject": "Su cuenta ha sido bloqueada",
+  "account_locked_message": "Su cuenta ha sido bloqueada debido a múltiples intentos fallidos de inicio de sesión. Por favor, póngase en contacto con el soporte para desbloquear su cuenta."
+}

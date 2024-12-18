@@ -7,18 +7,6 @@ from app.dependencies import get_settings
 from app.routers import user_routes
 from app.utils.api_description import getDescription
 from app.utils.translation import load_translations  # Import the load_translations function
-import logging
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-print("SMTP_SERVER:", os.getenv("smtp_server"))
-print("SMTP_PORT:", os.getenv("smtp_port"))
-print("SMTP_USERNAME:", os.getenv("smtp_username"))
-print("SMTP_PASSWORD:", os.getenv("smtp_password"))
-
-logging.basicConfig(level=logging.INFO)
 
 # Load translations into memory
 load_translations()

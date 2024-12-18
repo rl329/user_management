@@ -1,6 +1,11 @@
 {
-    "email_verified": "E-mail vérifié avec succès",
-    "verify_account_title": "Vérifiez votre compte",
-    "hello": "Bonjour",
-    "instruction_verify": "Merci de vous être inscrit sur OurSite. Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse e-mail :"
-  }
+  "email_verified": "E-mail vérifié avec succès",
+  "email_verification_subject": "Vérifiez votre compte",
+  "hello": "Bonjour {name},",
+  "email_verification_content": "Merci de vous être inscrit sur NotreSite. Veuillez cliquer sur le lien suivant pour vérifier votre adresse e-mail :",
+  "button_verify_email": "Vérifier l'e-mail",
+  "footer_thanks": "Merci, L'équipe de NotreSite",
+  "footer_unsubscribe": "Vous recevez cet e-mail parce que vous vous êtes inscrit sur notre site. Si vous ne souhaitez plus recevoir ces e-mails, vous pouvez vous désabonner à tout moment en cliquant sur {here}.",
+  "account_locked_subject": "Votre compte a été verrouillé",
+  "account_locked_message": "Votre compte a été verrouillé en raison de plusieurs tentatives de connexion échouées. Veuillez contacter le support pour déverrouiller votre compte."
+}

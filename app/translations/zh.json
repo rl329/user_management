@@ -1,6 +1,11 @@
 {
-    "email_verified": "邮箱验证成功",
-    "verify_account_title": "验证您的账户",
-    "hello": "你好",
-    "instruction_verify": "感谢您在OurSite注册。请点击以下链接验证您的电子邮箱地址："
-  }
+  "email_verified": "电子邮件验证成功",
+  "email_verification_subject": "验证您的账户",
+  "hello": "您好，{name}，",
+  "email_verification_content": "感谢您注册我们的站点。请点击以下链接验证您的电子邮件地址：",
+  "button_verify_email": "验证电子邮件",
+  "footer_thanks": "感谢， 我们的团队",
+  "footer_unsubscribe": "您收到此邮件是因为您已在我们的网站订阅。如果您不想再接收这些邮件，可以随时点击 {here} 取消订阅。",
+  "account_locked_subject": "您的账户已被锁定",
+  "account_locked_message": "由于多次登录失败，您的账户已被锁定。请联系支持部门解锁您的账户。"
+}

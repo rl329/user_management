@@ -1,6 +1,11 @@
 {
-    "email_verified": "E-mail verificado com sucesso",
-    "verify_account_title": "Verifique sua conta",
-    "hello": "Olá",
-    "instruction_verify": "Obrigado por se registrar no OurSite. Por favor, clique no link abaixo para verificar seu endereço de e-mail:"
-  }
+  "email_verified": "E-mail verificado com sucesso",
+  "email_verification_subject": "Verifique sua conta",
+  "hello": "Olá {name},",
+  "email_verification_content": "Obrigado por se registrar em NossoSite. Clique no link abaixo para verificar seu endereço de e-mail:",
+  "button_verify_email": "Verificar e-mail",
+  "footer_thanks": "Obrigado, A equipe do NossoSite",
+  "footer_unsubscribe": "Você está recebendo este e-mail porque optou por se inscrever em nosso site. Se não deseja mais receber estes e-mails, você pode cancelar a inscrição clicando em {here}.",
+  "account_locked_subject": "Sua conta foi bloqueada",
+  "account_locked_message": "Sua conta foi bloqueada devido a várias tentativas de login sem sucesso. Entre em contato com o suporte para desbloquear sua conta."
+}

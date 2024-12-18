@@ -1,6 +1,11 @@
 {
-    "email_verified": "E-posta başarıyla doğrulandı",
-    "verify_account_title": "Hesabınızı Doğrulayın",
-    "hello": "Merhaba",
-    "instruction_verify": "OurSite'a kaydolduğunuz için teşekkür ederiz. Lütfen e-posta adresinizi doğrulamak için aşağıdaki bağlantıya tıklayın:"
-  }
+  "email_verified": "E-posta başarıyla doğrulandı",
+  "email_verification_subject": "Hesabınızı Doğrulayın",
+  "hello": "Merhaba {name},",
+  "email_verification_content": "Sitemize kaydolduğunuz için teşekkür ederiz. E-posta adresinizi doğrulamak için lütfen aşağıdaki bağlantıya tıklayın:",
+  "button_verify_email": "E-postayı Doğrula",
+  "footer_thanks": "Teşekkürler, Sitemizin Ekibi",
+  "footer_unsubscribe": "Bu e-postayı, sitemize üye olduğunuz için alıyorsunuz. Eğer bu e-postaları almak istemiyorsanız, {here} bağlantısına tıklayarak aboneliğinizi iptal edebilirsiniz.",
+  "account_locked_subject": "Hesabınız Kilitlendi",
+  "account_locked_message": "Birden fazla başarısız giriş denemesi nedeniyle hesabınız kilitlendi. Hesabınızı açmak için lütfen destek ekibiyle iletişime geçin."
+}

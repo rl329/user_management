@@ -1,6 +1,11 @@
 {
-    "email_verified": "E-Mail erfolgreich verifiziert",
-    "verify_account_title": "Bestätigen Sie Ihr Konto",
-    "hello": "Hallo",
-    "instruction_verify": "Vielen Dank für Ihre Registrierung bei OurSite. Bitte klicken Sie auf den folgenden Link, um Ihre E-Mail-Adresse zu bestätigen:"
-  }
+  "email_verified": "E-Mail erfolgreich verifiziert",
+  "email_verification_subject": "Bestätigen Sie Ihr Konto",
+  "hello": "Hallo {name},",
+  "email_verification_content": "Vielen Dank für Ihre Registrierung bei UnserSite. Bitte klicken Sie auf den folgenden Link, um Ihre E-Mail-Adresse zu verifizieren:",
+  "button_verify_email": "E-Mail bestätigen",
+  "footer_thanks": "Danke, Das UnserSite-Team",
+  "footer_unsubscribe": "Sie erhalten diese E-Mail, weil Sie sich auf unserer Website angemeldet haben. Wenn Sie diese E-Mails nicht mehr erhalten möchten, können Sie sich jederzeit abmelden, indem Sie auf {here} klicken.",
+  "account_locked_subject": "Ihr Konto wurde gesperrt",
+  "account_locked_message": "Ihr Konto wurde aufgrund mehrerer fehlgeschlagener Anmeldeversuche gesperrt. Bitte kontaktieren Sie den Support, um Ihr Konto zu entsperren."
+}
