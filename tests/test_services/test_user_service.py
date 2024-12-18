@@ -137,7 +137,7 @@ async def test_account_lock_after_failed_logins(db_session, verified_user):
     max_login_attempts = get_settings().max_login_attempts
     for _ in range(max_login_attempts):
         await UserService.login_user(db_session, verified_user.email, "wrongpassword")
-    
+
     is_locked = await UserService.is_account_locked(db_session, verified_user.email)
     assert is_locked, "The account should be locked after the maximum number of failed login attempts."
 
@@ -161,3 +161,16 @@ async def test_unlock_user_account(db_session, locked_user):
     assert unlocked, "The account should be unlocked"
     refreshed_user = await UserService.get_by_id(db_session, locked_user.id)
     assert not refreshed_user.is_locked, "The user should no longer be locked"
+
+async def test_login_success(async_client, verified_user):
+    payload = {"username": verified_user.email, "password": "CorrectPass123"}
+    response = await async_client.post("/login/", data=payload)
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+
+async def test_login_incorrect_password(async_client, verified_user):
+    payload = {"username": verified_user.email, "password": "WrongPass123"}
+    response = await async_client.post("/login/", data=payload)
+    assert response.status_code == 401
+    assert response.json()["detail"] == "Incorrect email or password."
+

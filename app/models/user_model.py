@@ -75,11 +75,11 @@ class User(Base):
     hashed_password: Mapped[str] = Column(String(255), nullable=False)
 
   # NEW FIELD: User's preferred language
-    preferred_language: Mapped[str] = Column(String(10), nullable=False, default="en")
+    preferred_language: Mapped[str] = mapped_column(String(10), nullable=False, default="en")
 
-    def __repr__(self) -> str:
-        """Provides a readable representation of a user object."""
+    def __repr__(self):
         return f"<User {self.nickname}, Role: {self.role.name}, Language: {self.preferred_language}>"
+
     def lock_account(self):
         self.is_locked = True
 

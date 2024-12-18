@@ -24,11 +24,23 @@ async def test_has_role(user: User, admin_user: User, manager_user: User):
     assert manager_user.has_role(UserRole.MANAGER), "Pro user should have PRO role"
 
 @pytest.mark.asyncio
-async def test_user_repr(user: User):
+async def test_user_repr():
     """
     Tests the __repr__ method for accurate representation of the User object.
     """
-    assert repr(user) == f"<User {user.nickname}, Role: {user.role.name}>", "__repr__ should include nickname and role"
+    user = User(
+        nickname="thomas55",
+        role=UserRole.AUTHENTICATED,
+        preferred_language="en"
+    )
+
+    # Updated assertion to include the preferred_language field
+    expected_repr = f"<User {user.nickname}, Role: {user.role.name}, Language: {user.preferred_language}>"
+    assert repr(user) == expected_repr, "__repr__ should include nickname, role, and preferred_language"
+
+async def test_user_default_language():
+    user = User(nickname="defaultuser", role=UserRole.AUTHENTICATED)
+    assert user.preferred_language == "en"
 
 @pytest.mark.asyncio
 async def test_failed_login_attempts_increment(db_session: AsyncSession, user: User):
