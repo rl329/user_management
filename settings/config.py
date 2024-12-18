@@ -48,6 +48,7 @@ class Settings(BaseSettings):
 
     # Debug configuration
     debug: bool = Field(default=False, description="Debug mode outputs errors and SQL queries")
+    send_real_mail: bool = Field(default=True, description="Send real emails")
 
 
     class Config:

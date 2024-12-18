@@ -23,8 +23,10 @@ from datetime import timedelta
 from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, Response, status, Request
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.dependencies import get_current_user, get_db, get_email_service, require_role
+from app.models.user_model import User
 from app.schemas.pagination_schema import EnhancedPagination
 from app.schemas.token_schema import TokenResponse
 from app.schemas.user_schemas import LoginRequest, UserBase, UserCreate, UserListResponse, UserResponse, UserUpdate
@@ -247,9 +249,12 @@ async def verify_email(user_id: UUID, token: str, db: AsyncSession = Depends(get
     - **user_id**: UUID of the user to verify.
     - **token**: Verification token sent to the user's email.
     """
+    # Fetch the user based on user_id
+    result = await db.execute(select(User).filter(User.id == user_id))
+    user = result.scalars().first()
 
-    # For now, let's hardcode the language to 'en' until we decide how to determine it.
-    lang = "es"
+    # Set user's preferred language, default to 'en' if not set
+    lang = user.preferred_language if user.preferred_language else "en"
 
     if await UserService.verify_email_with_token(db, user_id, token):
         return {"message": translate(lang, "email_verified")}

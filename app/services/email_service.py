@@ -5,6 +5,7 @@ from app.utils.smtp_connection import SMTPClient
 from app.utils.template_manager import TemplateManager
 from app.models.user_model import User
 from app.utils.translation import translate  # Import the translate function
+import logging
 
 class EmailService:
     def __init__(self, template_manager: TemplateManager):
@@ -46,4 +47,7 @@ class EmailService:
     )
 
         # Send email - assumed synchronous
-        self.smtp_client.send_email(email_subject, html_content, user.email)
+        if settings.send_real_mail:
+            self.smtp_client.send_email(email_subject, html_content, user.email)
+        else:
+            logging.info("Email sending is disabled. Skipping email.")
